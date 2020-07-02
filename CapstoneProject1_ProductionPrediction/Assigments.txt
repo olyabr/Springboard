@@ -1,0 +1,21 @@
+#1 ML: Build an ML model to predict ‘cum_oil_365’ from 'prod-by-operated-day.csv’ 
+using data in ‘completion.csv’ and 'well-index.csv’. Measure error using RMSE.
+
+#2 Data Engineering: Time series transformation to convert 'monthly-production.csv’ 
+into 'prod-by-operated-day.csv’.
+
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html
+
+linear regression
+SVM
+decision trees
+random forest
+gradient boosting
+
+1. numeric features (scale the values for linear models like linear regression or SVM but keep as is for other complex models)
+2. Categorical features (if nominal use dummy variables or one hot encoding, if ordinal convert to numbers)
+3. for date time etc (you can extract year, month, day etc as separate columns and use them with other features OR use time series modeling - kind of more complex)
+For modeling
+1. First build models with all features and then perform feature selection
+2. For feature selection - start by dropping features which you dont think matters from a domain perspective and recheck performance by rebuilding model
+3. Other feature selection methods include using feature importance from models like random forest or using coefficients of linear regression to take features which are more imp
